@@ -268,6 +268,10 @@ require("lazy").setup({
 			},
 		},
 	},
+	{
+		"xiyaowong/transparent.nvim"
+		-- Remove all background colors to make nvim transparent
+	},
   {
     "laytan/cloak.nvim",
 		opts = {}, -- for default options, refer to the configuration section for custom setup.
@@ -869,6 +873,7 @@ require("lazy").setup({
     config = function()
       require("night-owl").setup()
 			vim.cmd.colorscheme("night-owl")
+			transparent = vim.g.transparent_enabled
       --vim.opt.colorcolumn = "41"
       vim.api.nvim_set_hl(0, "ColorColumn", {bg="#FF0000"})
       vim.api.nvim_set_hl(0, "Comment", {fg="#008B8B"})
